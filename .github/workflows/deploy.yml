@@ -21,5 +21,8 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs-material
 
+      - name: mkdocs build
+        run: mkdocs build
+
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        run: mkdocs gh-deploy --site-dir site --force

@@ -7,7 +7,8 @@ Navigate to the `argo/ignore` folder, and move these folders into the argo apps 
 mv argo/ignore/mesh argo/apps
 ```
 
-Ensure that any `repoURL` in any `*-application.yaml` files point correctly at your repository, *_not_* the template repository.
+!!! Warning ""
+    Ensure that any `repoURL` in any `*-application.yaml` files point correctly at your repository, *_not_* the template repository.
 
 Once you commit and push these folders, the Argo dashboard should extend considerably once you trigger the sync:
 ![argo-mesh](images/argo-mesh.png)

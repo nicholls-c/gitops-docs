@@ -55,3 +55,4 @@ nav:
     - Getting Started: argo/getting-started.md
     #- App-of-Apps: argo/app-of-apps.md
     - Next Steps: argo/next-steps.md
+    - Gateway API: argo/gateway-api.md

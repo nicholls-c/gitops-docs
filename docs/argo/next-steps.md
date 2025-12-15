@@ -108,6 +108,8 @@ git push
 Now if we forward the nginx service: `kubectl -n nginx port-forward svc/nginx 8080:80`
 
 We should get a `200` response from `curl`, and the default nginx site in our browser:
-![](images/nginx-curl.png)
+![nginx-curl](images/nginx-curl.png)
+
 <br>
-![](images/nginx-chrome.png)
+
+![nginx-chrome](images/nginx-chrome.png)

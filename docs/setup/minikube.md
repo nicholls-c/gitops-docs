@@ -7,6 +7,10 @@ date:
 
 These guides have been tested using `Minikube`.
 
+!!! Note "Local k8s"
+    Other options are available. Namely `kind`.
+    All steps should work on any local kubernetes offering
+
 Start a local cluster:
 ```bash
 # start minikube server

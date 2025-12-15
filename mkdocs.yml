@@ -1,0 +1,57 @@
+site_name: Commify GitOps Learning Materials
+site_description: Learning materials for end users to walk through
+site_url: https://gitops.cyph3rpunk.cc
+theme:
+  favicon: images/favicon.png
+  font:
+    code: Roboto Mono
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.footer
+  icon:
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra:
+  copyright: Copyright &copy; 2025 Commify Ltd
+  generator: false
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Setup:
+    - Setup: setup/setup.md
+    - Minikube: setup/minikube.md
+  - ArgoCD:
+    - Installation: argo/installation.md
+    - Getting Started: argo/getting-started.md
+    #- App-of-Apps: argo/app-of-apps.md
+    - Next Steps: argo/next-steps.md

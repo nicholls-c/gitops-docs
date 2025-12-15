@@ -1,6 +1,6 @@
 site_name: Commify GitOps Learning Materials
 site_description: Learning materials for end users to walk through
-site_url: https://gitops.cyph3rpunk.cc
+site_url: https://nicholls-c.github.io/gitops-docs/
 theme:
   favicon: images/favicon.png
   font:

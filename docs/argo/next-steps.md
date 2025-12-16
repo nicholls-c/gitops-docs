@@ -100,22 +100,20 @@ git push
 6. And navigate back to our Argo App-of-Apps and click _Sync_ > _Synchronize_, we should see our `nginx` Argo app:
    ![nginx-app](images/nginx-app.png)
 
-7.  Navigate into our app, and it should reconcile and show as sync'd:
+7. Navigate into our app, and it should reconcile and show as sync'd:
    ![nginx-state](images/nginx-state.png)
 
-<br>
+8.  Now if we forward the nginx service: `kubectl -n nginx port-forward svc/nginx 8080:80`
 
-Now if we forward the nginx service: `kubectl -n nginx port-forward svc/nginx 8080:80`
+9.  We should get a `200` response from `curl`:  
+   ![nginx-curl](images/nginx-curl.png)
 
-We should get a `200` response from `curl`:
-![nginx-curl](images/nginx-curl.png)
+10. And the default nginx site in our browser:  
+   ![nginx-chrome](images/nginx-chrome.png)
 
-<br>
+## Kiali
 
-And the default nginx site in our browser
-![nginx-chrome](images/nginx-chrome.png)
-
-To see kiali tracing:
+To see distributed tracing in action:
 1. Hit the nginx gateway a few times in curl.
 2. Open kiali dashboard [kiali](http://127.0.0.1:8082/kiali/console/graph/namespaces?traffic=ambient%2CambientTotal%2Cgrpc%2CgrpcRequest%2Chttp%2ChttpRequest%2Ctcp%2CtcpSent&graphType=versionedApp&namespaces=nginx&duration=60&refresh=60000&layout=dagre&badgeSecurity=true&animation=true)
 3. Ensure dashboard is set for:

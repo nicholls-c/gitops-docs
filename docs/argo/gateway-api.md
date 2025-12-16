@@ -77,10 +77,10 @@ spec:
           value: /
 ```
 
-Once these changes have been sync'd and pushed:
+Once these changes have been sync'd and pushed:  
 ![nginx-gateway](images/nginx-gw.png)
 
-The tunnel will reflect the new gateway:
+The tunnel will reflect the new gateway:  
 ![nginx-tunnel](images/nginx-tunnel.png)
 
 And nginx will be browsable on [127.0.0.1:8080](http://127.0.0.1:8080)

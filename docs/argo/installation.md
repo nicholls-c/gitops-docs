@@ -43,7 +43,7 @@ If you now forward the Argo service, you should get the UI rendering (you should
 kubectl port-forward svc/argocd-server -n argocd 8082:443
 ```
 
-To sign in to the UI, username is `admin`.
+To sign in to the UI, username is `admin`:  
 ![Argo Login](images/login.png)
 
 The initial password can be retrieved using the following command:

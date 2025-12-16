@@ -6,23 +6,15 @@
 
 <br>
 
-## Install
-
-1. Create and set a namespace for ArgoCD:  
-   ```bash
-   kubectl create namespace argocd && kubectl namespace argocd
-   ```
-2. Install ArgoCD CRDs:
-   ```bash
-   kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v3.2.1/manifests/install.yaml
-   ```
-3. Verify installation: `kubectl -n argocd get statefulset`
-
----
-
 ## Authenticate
 
-Create a kubernetes secret from your github `ssh` key (don't do this for prod :tongue:).
+### Create and set a namespace for ArgoCD:  
+```bash
+kubectl create namespace argocd; 
+kubectl ns argocd;
+```
+
+### Create a kubernetes secret from your github `ssh` key (don't do this for prod :tongue:).
 
 Update the path to your private github ssh key, and the name of your personal github.
 ```bash
@@ -37,6 +29,18 @@ Label the secret for Argo:
 ```bash
 kubectl label secret github-ssh -n argocd argocd.argoproj.io/secret-type=repo-creds
 ```
+
+## Install
+
+1. Install ArgoCD CRDs:
+   ```bash
+   kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v3.2.1/manifests/install.yaml
+   ```
+2. Verify installation: `kubectl -n argocd get statefulset`
+
+---
+
+## Use
 
 If you now forward the Argo service, you should get the UI rendering (you should also be able to click through `Settings` > `Repository` and see your personal org).
 ```bash

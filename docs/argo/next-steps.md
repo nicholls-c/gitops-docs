@@ -1,4 +1,4 @@
-# Next Steps
+# Deploying An App
 
 Let's create a simple nginx app.
 
